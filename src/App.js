@@ -11,8 +11,8 @@ import StoreImageInIndexedDBTest from './StoreIDB-test';
 function App() {
    return (
        <div className="App">
-           <StoreImageInIndexedDB src="99-mb.jpg" alt="IDB" className="App-img" />
-           <StoreImageInIndexedDBTest src="6.png" alt="IDB" className="App-img"/>
+           <StoreImageInIndexedDB src="99-mb.jpg" alt="IDB-large" className="App-img" />
+           <StoreImageInIndexedDBTest src="6.png" alt="IDB-test" className="App-img"/>
            <StoreImageInLocalStorage/>
            <StoreImageInSessionStorage/>
            <StoreImageInFetchAPI/>
