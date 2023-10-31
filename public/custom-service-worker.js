@@ -3,12 +3,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('app-cache').then(function(cache) {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/offline.html',
-                '/manifest.json',
-                '/logo192.png',
-                '/logo512.png'
+                '/'
             ]);
         })
     );
