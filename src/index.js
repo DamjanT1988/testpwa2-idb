@@ -24,6 +24,8 @@ if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'htt
   });
 }
 
+//RELOAD PAGE
+/*
     window.onload = function() {
         let reloadCount = sessionStorage.getItem("reloadCount");
         if (!reloadCount) {
@@ -39,3 +41,4 @@ if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'htt
             sessionStorage.removeItem("reloadCount");
         }
     };
+*/
