@@ -2,11 +2,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open('image-cache').then((cache) => {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/logo512.png',
-                '/offline.html'
-                // Add paths and URLs to cache
+                '/'
             ]);
         })
     );
