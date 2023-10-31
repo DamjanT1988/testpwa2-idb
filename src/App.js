@@ -14,6 +14,7 @@ import ImageFetcher from './ImageFetcher';
 function App() {
    return (
        <div className="App">
+           <ImageFetcher/>
            
            <StoreImageInLocalStorage/>
            <StoreImageInSessionStorage/>
@@ -28,6 +29,4 @@ export default App;
 /*
 <StoreImageInIndexedDB src="" alt="IDB-large" className="App-img" />
 <StoreImageInIndexedDBTest src="" alt="IDB-test" className="App-img"/>
-<ImageFetcher/>
-
 */
