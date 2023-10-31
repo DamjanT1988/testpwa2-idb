@@ -25,10 +25,17 @@ if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'htt
 }
 
     window.onload = function() {
-        if (!sessionStorage.getItem("hasReloaded")) {
-            sessionStorage.setItem("hasReloaded", true);
+        let reloadCount = sessionStorage.getItem("reloadCount");
+        if (!reloadCount) {
+            reloadCount = 0;
+        }
+
+        if (reloadCount < 2) {
             setTimeout(function() {
+                sessionStorage.setItem("reloadCount", ++reloadCount);
                 window.location.reload();
-            }, 1000);
+            }, reloadCount === 0 ? 2000 : 5000);
+        } else {
+            sessionStorage.removeItem("reloadCount");
         }
     };
