@@ -3,9 +3,22 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('app-cache').then(function(cache) {
             return cache.addAll([
-                './',
-                'page1.html',
-                'page2.html'
+                //'./',
+                '/page1.html',
+                '/page2.html',
+                '/index.html',
+                '/offline.html',
+                '/1.jpg',
+                '/2.jpg',
+                '/3.jpg',
+                '/4.jpg',
+                '/5.jpg',
+                '/6.png',
+                '/manifest.json',
+                'favicon.ico',
+                'logo192.png',
+                'logo512.png',
+                'robots.txt'
             ]);
         })
     );
