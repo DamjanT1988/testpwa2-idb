@@ -32,11 +32,11 @@ if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'htt
             reloadCount = 0;
         }
 
-        if (reloadCount < 2) {
+        if (reloadCount < 1) {
             setTimeout(function() {
                 sessionStorage.setItem("reloadCount", ++reloadCount);
                 window.location.reload();
-            }, reloadCount === 0 ? 2000 : 5000);
+            }, reloadCount === 0 ? 3000 : 5000);
         } else {
             sessionStorage.removeItem("reloadCount");
         }
