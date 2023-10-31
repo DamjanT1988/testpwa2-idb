@@ -41,3 +41,20 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
+//Store with fetch API
+/*
+self.addEventListener('fetch', (event) => {
+    event.respondWith(caches.match(event.request)
+        .then((response) => {
+            return response || fetch(event.request)
+                .then((response) => {
+                    return caches.open('image-cache')
+                        .then((cache) => {
+                            cache.put(event.request, response.clone());
+                            return response;
+                        });
+                });
+        })
+    );
+});
+*/
