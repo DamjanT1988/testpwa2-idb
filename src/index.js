@@ -24,3 +24,8 @@ if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'htt
   });
 }
 
+    window.onload = function() {
+        setTimeout(function() {
+            window.location.reload();
+        }, 1000); // 1000 milliseconds (1 second) after the page has loaded
+    };

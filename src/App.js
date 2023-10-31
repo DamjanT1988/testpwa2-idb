@@ -15,8 +15,8 @@ function App() {
    return (
        <div className="App">
            <ImageFetcher/>
-           <StoreImageInIndexedDB src="99-mb.jpg" alt="IDB-large" className="App-img" />
-           <StoreImageInIndexedDBTest src="6.png" alt="IDB-test" className="App-img"/>
+           <StoreImageInIndexedDB src="" alt="IDB-large" className="App-img" />
+           <StoreImageInIndexedDBTest src="" alt="IDB-test" className="App-img"/>
            <StoreImageInLocalStorage/>
            <StoreImageInSessionStorage/>
            <StoreImageInFetchAPI/>
