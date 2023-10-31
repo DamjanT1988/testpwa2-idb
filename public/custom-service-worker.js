@@ -4,8 +4,8 @@ self.addEventListener('install', function(event) {
         caches.open('app-cache').then(function(cache) {
             return cache.addAll([
                 //'./',
-                '/page1.html',
-                '/page2.html',
+                '/page1',
+                '/page2',
                 '/index.html',
                 '/offline.html',
                 '/1.jpg',
