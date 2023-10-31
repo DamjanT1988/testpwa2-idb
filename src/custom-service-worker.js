@@ -2,7 +2,9 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open('image-cache').then((cache) => {
             return cache.addAll([
-                '/'
+                '/',
+                'page1.html',
+                'page2.html'
             ]);
         })
     );
@@ -23,11 +25,6 @@ self.addEventListener('fetch', (event) => {
     );
 });
 
-navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (window.refreshed) return;
-    window.location.reload();
-    window.refreshed = true;
-});
 
 
 //Store with fetch API
