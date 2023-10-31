@@ -25,7 +25,10 @@ if ('serviceWorker' in navigator && window.location.protocol === 'http:' || 'htt
 }
 
     window.onload = function() {
-        setTimeout(function() {
-            window.location.reload();
-        }, 1000); // 1000 milliseconds (1 second) after the page has loaded
+        if (!sessionStorage.getItem("hasReloaded")) {
+            sessionStorage.setItem("hasReloaded", true);
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000);
+        }
     };
