@@ -23,6 +23,11 @@ self.addEventListener('fetch', (event) => {
     );
 });
 
+navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (window.refreshed) return;
+    window.location.reload();
+    window.refreshed = true;
+});
 
 
 //Store with fetch API
